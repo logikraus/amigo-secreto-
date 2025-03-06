@@ -24,3 +24,14 @@ function atualizarLista() {
         lista.appendChild(li);
     });
 }
+
+
+function sortearAmigo() {
+    if (amigos.length === 0) {
+        alert("Adicione pelo menos um nome antes de sortear.");
+        return;
+    }
+    
+    const indiceSorteado = Math.floor(Math.random() * amigos.length);
+    document.getElementById("resultado").textContent = `Amigo Secreto: ${amigos[indiceSorteado]}`;
+}
